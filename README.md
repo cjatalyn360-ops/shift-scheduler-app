@@ -44,6 +44,7 @@ A full-stack web application for managing employee work schedules. Users can add
 - Create a database (e.g., `shift_scheduler`)
 - Create required tables (`employees`, `shifts`)
 - Import or run provided SQL script below
+- Current employees listed in test screenshots are NOT real individuals and are simply placeholders used for debugging and testing functionality. 
 
 ## Script Setup
 
