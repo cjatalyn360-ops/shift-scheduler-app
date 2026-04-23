@@ -32,9 +32,11 @@ A full-stack web application for managing employee work schedules. Users can add
 
 1. Clone the repository
 2. Open the project in VS Code
-3. Install dependencies, run this in VS CODE project terminal:
+3. Install Live Server extension
+4. Install dependencies, run this in VS CODE project terminal:
    npm install mysql2
-4. run command 'node Server.js' to initialize connection with the server.
+5. run command 'node Server.js' to initialize connection with the server
+6. On Dashboard.html, right click to open with Live Server extension
 
 
 ### 1. Set Up Database
