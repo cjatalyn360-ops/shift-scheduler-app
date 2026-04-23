@@ -1,0 +1,675 @@
+/*Imports fonts */
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=PT+Sans+Narrow:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=PT+Sans+Narrow:wght@400;700&family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=PT+Sans+Narrow:wght@400;700&family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+/*styles the webpage links */
+a {
+  color: #2f4c90;
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+}
+
+h1{
+  text-align: center;
+  font-family: "Iosevka Charon Mono", monospace;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+p, h2{
+  text-align: center;
+  font-family: "Iosevka Charon Mono", monospace;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+body{
+  margin: 0;
+  background-color: #f3efe8;
+}
+
+button{
+
+    display: flex;
+    width: 81%;
+    justify-content: center;
+  
+    padding: 8px 18px;
+    background-color: #6b3f8c;
+    color: white;
+  
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: bold;
+
+    transition: all 0.6s ease; /* This gives our button a smooth transition when hovered on */
+
+  }
+
+/* This enlarges the button when hovered over it */
+button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/*This shrinks the button when it is clicked. It gives a animation like the button is being pressed down */
+button:active{
+  transform: scale(0.97);
+}
+
+/* ----------------- Shared Header ------------------- */
+.app-topbar{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: #6b3f8c;
+}
+
+.topbar-left{
+  display: flex;
+  align-items: center;
+}
+
+.topbar-center{
+  display: flex;
+  justify-content: center;
+}
+
+.topbar-right{
+  min-height: 1px;
+}
+
+.brand-wrap{
+  margin-left: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo{
+  display: block;
+  width: 48px;
+  height: auto;
+}
+
+.small-logo{
+  width: 70px;
+}
+
+.topbar-title{
+  margin: 0;
+  color: #ffffff;
+  font-family: "Iosevka Charon Mono", monospace;
+  font-size: 34px;
+  letter-spacing: 0.5px;
+}
+
+.app-nav{
+  background: rgba(107, 63, 140, 0.14);
+  border-bottom: 1px solid rgba(7, 29, 87, 0.1);
+}
+
+.app-nav-links{
+  width: min(94%, 1200px);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.app-nav-links a{
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  font-weight: 700;
+  color: #2f3f67;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.app-nav-links a:hover{
+  background: rgba(107, 63, 140, 0.18);
+}
+
+.app-main{
+ /* width: min(94%, 1200px); */ 
+  margin: 28px auto 44px auto;
+}
+
+/* ----------------- Add Employee Section ------------------- */
+.add-employee-container{
+  margin: 0px auto 40px auto; 
+  width: 80%;
+  border-radius: 12px; /* Makes the corners round */
+  background: rgb(189, 164, 197, 0.5);
+  padding-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, sans-serif;
+}
+
+.add-employee-input{
+  margin: 10px auto 30px auto;
+  width: 80%;
+  display: flex;
+  align-items: left;
+  padding: 4px;
+
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.add-employee-input:focus{
+border: 3px solid #071d57;
+outline: none;
+}
+
+.add-employee-label{
+  margin: auto;
+  display: block;
+  width: 80%;
+ 
+
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+
+/* ----------------- Employee Table Controls ------------------- */
+
+.table-controls{
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.number-employees-displayed-label{
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Iosevka Charon Mono", monospace;
+}
+
+select{
+  padding: 5px 20px 5px 5px;
+  font-size: 16px;
+  font-family: "Iosevka Charon Mono", monospace;
+  border-color: #6b3f8c;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+
+/* ----------------- Employee Table ------------------- */
+
+  .employee-table {
+    margin: 0px auto; /* centers table on the screen */
+    width: 80%; /* allows table to take up 80% of the screen width */
+    border-radius: 12px; /* Makes the corners round */
+    overflow: hidden; /* Makes sure table content does not spill out of the table*/
+
+    font-family: Verdana; /* Changes fonts */
+    font-size: 18px;
+    color: white; /* Makes all fonts on table white */
+    background: rgb(189, 164, 197); 
+
+    /*border-collapse: collapse; */
+  }
+  
+  .employee-table th,
+  .employee-table td {
+    padding: 12px 16px; 
+    text-align: left;
+  }
+  
+  /*Table headers */
+  .employee-table thead {
+    background: #796787; /* Sets the header background coloor */
+    font-weight: bolder; 
+  }
+  
+  .employee-table tbody tr {
+    border-bottom: 3px solid #B9A7C6;
+    
+    font-weight: bold;
+  }
+  
+  .employee-table button {
+    background: #f54444; /* Adds color to the button */
+    font-size: 18px; 
+
+    padding: 6px 10px; /* Adds space between button edges and font */
+    border-radius: 6px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor of mouse to a pointer */
+
+  }
+
+  /* ---------------- Search Employee ---------------- */
+
+.search-employee-container{
+    margin: 40px auto 40px auto; 
+    width: 80%;
+    border-radius: 12px; /* Makes the corners round */
+    padding-bottom: 10px;
+    align-items: center;
+    background: rgb(189, 164, 197, 0.5);
+    
+  
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, sans-serif;
+    gap: 10px
+  }
+
+  .search-employee-label{
+    margin: auto;
+    display: block;
+    width: 80%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+  }
+
+  .search-employee-input{
+    margin: 10px auto 30px auto;
+    width: 80%;
+    display: flex;
+    align-items: left;
+    padding: 4px;
+  
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+  
+  .search-employee-input:focus{
+  border: 3px solid #071d57;
+  outline: none;
+  }
+
+  .search-employee-button{
+    background-color: rgb(241, 153, 51);
+  }
+  /* ---------------- Calendar ---------------- */
+
+.calendar-container {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Verdana;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.calendar-header button {
+  font-size: 20px;
+  padding: 6px 12px;
+  width: 10%;
+}
+
+.calendar-days,
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-days div {
+  font-weight: bold;
+  background: #796787;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.calendar-dates div {
+  background: #B9A7C6;
+  padding: 15px;
+  border-radius: 6px;
+  min-height: 40px;
+}
+
+.calendar-dates div:hover {
+  background: #9d8ab0;
+  cursor: pointer;
+}
+
+/*--------- Login & Signup Page Styling ---------*/
+
+.auth-page{
+  min-height: 100vh;
+  margin: 0;
+  background: white;
+}
+
+.dashboard-login-page{
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-topbar{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.auth-main{
+  width: min(92%, 520px);
+  margin: 38px auto 44px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
+  align-items: center;
+}
+
+.auth-page-header{
+  text-align: center;
+  color: #071d57;
+}
+
+.auth-page-header .eyebrow{
+  margin: 0 0 8px 0;
+  text-align: center;
+  font-family: "Iosevka Charon Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #4c5f90;
+}
+
+.auth-page-header h2{
+  margin: 0;
+  text-align: center;
+  font-family: "Iosevka Charon Mono", monospace;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.auth-subtext{
+  margin: 14px 0 0 0;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #33425f;
+}
+
+.auth-card{
+  width: 100%;
+  max-width: 450px;
+  padding: 30px 28px;
+  border-radius: 16px;
+  border: 3px solid rgba(25, 41, 138, 0.144);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 14px 30px rgba(7, 29, 87, 0.14);
+  font-family: Verdana, sans-serif;
+}
+
+.auth-card h2{
+  margin: 0 0 18px 0;
+  text-align: center;
+  color: #071d57;
+  font-family: "Iosevka Charon Mono", monospace;
+  font-size: 28px;
+}
+
+.auth-card form{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-card label{
+  width: 100%;
+  margin: 0;
+  color: #1d2e58;
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.auth-card input{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: 1px solid #b4bfd7;
+  background: rgba(255, 255, 255, 0.94);
+  font-size: 15px;
+}
+
+.auth-card input:focus{
+  outline: none;
+  border-color: #4c5f90;
+  box-shadow: 0 0 0 3px rgba(76, 95, 144, 0.18);
+}
+
+.auth-card button{
+  width: 100%;
+  margin-top: 8px;
+  justify-content: center;
+  display: inline-flex;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 17px;
+}
+
+.auth-card p{
+  margin: 6px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: Verdana, sans-serif;
+}
+
+.auth-page a{
+  margin-left: 0;
+  font-size: 14px;
+  color: #274a93;
+  font-family: Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.forgot{
+  text-align: center;
+}
+
+.forgot a{
+  font-size: 13px;
+}
+
+.auth-footer-text{
+  margin-top: 10px;
+}
+
+#loginMessage,
+#signupMessage,
+#resetMessage{
+  margin-top: 2px;
+  min-height: 18px;
+  font-size: 13px;
+  color: #da7b00;
+}
+
+@media (max-width: 860px){
+  .topbar-title{
+    font-size: 28px;
+  }
+
+  .auth-main{
+    width: min(94%, 520px);
+    gap: 16px;
+    margin-top: 14px;
+  }
+
+  .auth-page-header h2{
+    font-size: 32px;
+  }
+
+  .app-nav-links{
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .app-nav-links a{
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
+
+/*--------- Account Styling ---------*/
+.account-section {
+        margin: 0 auto 24px auto;
+        width: 80%;
+        border-radius: 12px;
+        background: rgb(189, 164, 197, 0.5);
+        padding: 24px 32px;
+        font-family: Verdana, sans-serif;
+      }
+
+      .account-section h3 {
+        font-family: "Iosevka Charon Mono", monospace;
+        font-size: 20px;
+        font-weight: bold;
+        color: #3a1a5a;
+        margin: 0 0 16px 0;
+        text-align: left;
+      }
+
+      .account-info-row {
+        font-size: 15px;
+        color: #2a1a3a;
+        margin-bottom: 6px;
+      }
+
+      .account-info-row span {
+        font-weight: bold;
+        color: #4a2a6a;
+      }
+
+      .account-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 9px 12px;
+        border-radius: 8px;
+        border: none;
+        font-size: 15px;
+        font-family: Verdana, sans-serif;
+        margin-bottom: 12px;
+        background: #fff;
+      }
+
+      .account-input:focus {
+        outline: 3px solid #071d57;
+      }
+
+      .account-label {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: #4a2a6a;
+        margin-bottom: 5px;
+        width: auto;
+        margin-left: 0;
+      }
+
+      .account-btn {
+        display: inline-flex !important;
+        width: auto !important;
+        padding: 9px 24px;
+        font-size: 15px;
+        justify-content: center;
+        margin-top: 4px;
+      }
+
+      .account-btn-danger {
+        background-color: #f54444 !important;
+      }
+
+      .account-status {
+        font-size: 13px;
+        font-family: Verdana, sans-serif;
+        margin-top: 10px;
+        min-height: 18px;
+        color: #da7b00;
+      }
+
+      .account-status.success { color: #1b5e20; }
+      .account-status.error   { color: #880e4f; }
+      
+/*--------- Visual Graphs Styling ---------*/
+
+.quick-stats-container{
+  margin: 0px auto 40px auto; 
+  padding-bottom: 40px;
+  padding-left: 40px;
+  width: 80%;
+  border-radius: 12px; /* Makes the corners round */
+  background: rgb(246, 181, 106);
+
+  display: flex;
+  flex-direction: column;
+  font-family: Zain; /* Changes fonts */
+  font-weight: bold;
+  gap: 15px;
+} 
+
+/*----------- adding shift calendar styling --------*/
+.modal-content {
+  background: white;
+  padding: 25px;
+  margin: 10% auto;
+  width: 320px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* even spacing */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #4a2a6a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tasktopus - Login</title>
+  </head>
+  <body class="auth-page dashboard-login-page">
+    <!-- Top Header Bar -->
+    <header class="app-topbar auth-topbar">
+      <div class="topbar-left">
+        <a href="index.html" class="brand-wrap">
+          <img
+            src="tasktopus (2).png"
+            alt="Tasktopus logo"
+            class="brand-logo small-logo"
+          />
+        </a>
+      </div>
+
+      <div class="topbar-center">
+        <h1 class="topbar-title">Tasktopus</h1>
+      </div>
+
+      <div class="topbar-right"></div>
+    </header>
+
+    <!-- Main Login Area -->
+    <main class="auth-main">
+      <div class="auth-page-header">
+        <p class="eyebrow">Tasktopus</p>
+        <h2>Dive Back In!</h2>
+      </div>
+
+      <div class="login-container auth-card login-card-enhanced">
+        <h2>Login</h2>
+
+        <form id="loginForm">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="Email" required />
+
+          <label for="loginPassword">Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          />
+
+          <div class="forgot">
+            <a href="forgot-password.html">Forgot Password?</a>
+          </div>
+
+          <button type="submit">Login</button>
+          <p id="loginMessage"></p>
+
+          <p class="auth-footer-text">
+            New Here?
+            <a href="signup.html" id="showSignup">Create an Account</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <script type="module" src="login.js"></script>
+  </body>
+</html>
