@@ -8,7 +8,7 @@ const mysql = require("mysql2");
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "iusb2026", //iusb2026!
+  password: "YOUR_PASSWORD_HERE", //password is unique to device that app is being tested on
   database: "Test_db",
 });
 
