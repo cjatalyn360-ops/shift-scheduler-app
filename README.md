@@ -1,14 +1,5 @@
 # Shift Scheduling Web App
 
-## Current Status
-This project is currently in development.
-
-### Planned Features
-- Full calendar UI integration
-- Add/edit/delete shifts connected to MySQL
-- Employee management system
-- Improved scheduling visualization
-
 ## Description
 A full-stack web application for managing employee work schedules. Users can add, edit, and remove shifts, with data stored in a MySQL database.
 
@@ -27,16 +18,19 @@ A full-stack web application for managing employee work schedules. Users can add
 - MySQL Workbench
 
 ## How to Run the Project
+This Project can be ran utilizing the front-end code only, however in order to fully utilize the employee and shift features MySQL and Node.js will need to be installed for the back-end.
 
 ## Installation
 
 1. Clone the repository
 2. Open the project in VS Code
 3. Install Live Server extension
-4. Install dependencies, run this in VS CODE project terminal:
+4. MySQL installation
+5. Node.js installation
+6. To install dependencies, run this in VS CODE project terminal:
    npm install mysql2
-5. run command 'node Server.js' to initialize connection with the server
-6. On Dashboard.html, right click to open with Live Server extension
+7. run command 'node Server.js' to initialize connection with the server
+8. On Dashboard.html, right click to open with Live Server extension
 
 
 ### 1. Set Up Database
@@ -80,7 +74,6 @@ VALUES
 
 ## Notes
 - Ensure MySQL server is running before starting the app
-- Backend must be running for the app to function
 
 ## Author
 Connor Prout (Group Project)
