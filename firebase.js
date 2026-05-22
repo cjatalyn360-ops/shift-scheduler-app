@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY_HERE",
+  apiKey: "AIzaSyCdpmhy5cSR7P2r2qDY3asX0EUAeOl9KMI",
   authDomain: "tasktopus-capstone.firebaseapp.com",
   projectId: "tasktopus-capstone",
   storageBucket: "tasktopus-capstone.firebasestorage.app",
