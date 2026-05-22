@@ -1,13 +1,14 @@
 # Shift Scheduling Web App
 
 ## Description
-A full-stack web application for managing employee work schedules. Users can add, edit, and remove shifts, with data stored in a MySQL database.
+'Tasktopus' A full-stack web application for managing employee work schedules. Users can add, edit, and remove shifts, with data stored in a MySQL database.
 
 ## Features
 - Add, edit, and delete employee shifts
 - Store shift data (date, start time, end time)
 - Connects to MySQL database for persistent storage
 - Dynamic front-end interface for viewing schedules
+- To do list where tasks can be added alongside an image
 
 ## Technologies Used
 - HTML
